@@ -1,0 +1,158 @@
+html {
+    box-sizing:border-box;
+}
+
+*, *:before, *:after {
+    box-sizing:inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+@font-face {
+	font-family: Futura;
+	src: url(../fonts/Futura\ Extra\ Black\ Condensed\ BT.ttf);
+}
+
+
+.bookBase {
+    width: 385px;
+    height: 600px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -5;
+    overflow: hidden;
+ }
+
+ .white {
+    width: 5px;
+    height: 600px;
+    background: white;
+    position: absolute;
+    left: 88px;
+
+
+    z-index: 5;
+ }
+
+ .text{
+    font-family: Futura;
+    color: #8ce60b;
+    left: -3.5px;
+    top: 450px;
+    transform: rotateZ(-90deg);
+    font-size: 124px;
+    position: relative;
+    transition: color 0.5s ease;
+    animation: slide 8s linear infinite;
+
+    
+    /* letter-spacing: -3px; */
+ }
+
+ .text2{
+    font-family: Futura;
+    color: #8ce60b;
+    left: -3.5px;
+    top: 450px;
+    transform: rotateZ(-90deg);
+    font-size: 124px;
+    position: relative;
+    transition: color 0.5s ease;
+    animation: slide2 8s linear infinite;
+    
+    /* letter-spacing: -3px; */
+ }
+ .black {
+
+    width: 93px;
+    height: 600px;
+    background: black;
+    position: absolute;
+
+    z-index: 2;
+
+ }
+
+ .smile {
+    width: 450px;
+    height: 450px;
+    top: 338px;
+    left: 67px;
+    position: absolute;
+    z-index: 1;
+    animation: shrink 2s ease, spin 12s linear infinite  ;
+    transform-origin: 50% 50%;
+    /* opacity: 50%; */
+}
+
+ /* .smile2 {
+    width: 1300px;
+    height: 1300px;
+    top: -88px;
+    left: -358px;
+    position: absolute;
+    z-index: 1;
+	animation: spin 12s linear infinite ;
+    transform-origin: 50% 50%;
+    opacity: 50%;
+} */
+
+
+
+@keyframes spin {
+	0% { transform: rotatez(0deg) rotateY(0deg); }
+	50% { transform: rotatez(180deg) rotateY(0deg); }
+	100% { transform: rotatez(360deg) rotateY(00deg); }
+}
+
+@keyframes slide {
+	0% { top: 450px; }
+	100% { top: 1050px; }
+}
+
+@keyframes slide2 {
+	0% { top: -300px; }
+	100% { top: 300px; }
+}
+
+@keyframes grow {
+	0% { width: 450px; height: 450px; top: 338px; left: 67px; }
+	100% { width: 1300px; height: 1300px; top: -88px; left: -358px;}
+}
+
+@keyframes shrink {
+    0% { width: 1300px; height: 1300px; top: -88px; left: -358px;}
+	100% { width: 450px; height: 450px; top: 338px; left: 67px; }
+
+}
+
+.smile:hover{
+    animation: grow 2s ease, spin 12s linear infinite  ;
+    width: 1300px;
+    height: 1300px;
+    top: -88px;
+    left: -358px;
+    position: absolute;
+    z-index: 1;
+    transform-origin: 50% 50%;
+}
+
+.black:hover .text{
+    color: #FFF400;
+    }
+
+.black:hover .text2{
+    color: #FFF400;
+
+    }
+
+ .background {
+
+    position: absolute;
+
+ }
